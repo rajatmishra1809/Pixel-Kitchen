@@ -24,19 +24,18 @@ The project demonstrates cloud architecture concepts through web hosting, server
 
 ## ✨ Features
 
-- 🖼️ **Image Upload:** Upload images in JPG, JPEG, PNG, and WebP formats.
-- 🎨 **Automatic Color Extraction:** Extract 5–8 dominant colors from an image.
-- 🌈 **Palette Generation:** Create complementary, analogous, triadic, and monochromatic color schemes.
-- 🧪 **Color Explorer:** View HEX, RGB, and HSL values for individual colors.
-- 🔒 **Color Locking:** Lock preferred colors and regenerate the remaining palette.
-- 👁️ **Live Design Preview:** Preview palettes on sample website components.
-- 📋 **One-Click Copy:** Copy HEX codes and CSS snippets to the clipboard.
-- 💾 **Save Palettes:** Store favorite color combinations for later use.
-- 📦 **Export Options:** Export palettes as CSS variables, JSON, or PNG.
-- 🪟 **Liquid Glass UI:** Experience a modern interface with translucent panels, smooth transitions, gradients, and animations.
-- 📱 **Responsive Design:** Access the application across desktop, tablet, and mobile devices.
-
-*Feature availability depends on the current implementation.*
+- 🖼️ **Image Upload & Curated Presets:** Upload images in JPG, JPEG, PNG, and WebP formats, or test instantly with curated landscape, architecture, and urban scenes.
+- 🎨 **Client-Side Quantization Engine:** Extract 5–8 dominant colors directly in the browser via canvas without requiring paid AI APIs.
+- 🔍 **Interactive Eyedropper:** Hover over images with a live magnifying loupe to sample and add any exact pixel color.
+- 🌈 **Mathematical Color Harmonies:** Generate Complementary, Analogous, Triadic, Tetradic, Monochromatic, and Split-Complementary schemes.
+- 🧪 **Precision Inspector:** Fine-tune colors using an interactive color wheel, HEX input, and real-time HSL sliders.
+- 🔒 **Color Locking & Reordering:** Lock preferred colors and regenerate the remaining palette, or reorder swatches.
+- 👁️ **Live Design Preview:** Real-time website mockup preview with Dark/Light mode and Desktop/Mobile responsive viewports.
+- ♿ **Accessibility & CVD Matrix:** Real-time WCAG 2.1 AA/AAA contrast ratios and color blindness simulations (Protanopia, Deuteranopia, Tritanopia, Achromatopsia).
+- 📋 **One-Click Copy:** Copy HEX codes with liquid glass feedback toasts.
+- 💾 **Save Palettes:** Persist color collections locally with an AWS DynamoDB-ready storage architecture.
+- 📦 **Multi-Format Export:** Export palettes as CSS variables, Tailwind CSS config, JSON, or downloadable 1200×680 high-res PNG cards.
+- 🪟 **Liquid Glass UI:** Modern Apple-inspired glassmorphism with layered blur, ambient violet/cyan glows, and fluid Motion transitions.
 
 ## 🛠️ Tech Stack
 
@@ -99,15 +98,13 @@ Make sure you have installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/rajatmishra1809/Pixel-Kitchen.git
 ```
-
-Replace the URL with your actual GitHub repository URL.
 
 ### 2. Navigate to the project directory
 
 ```bash
-cd YOUR_REPOSITORY
+cd Pixel-Kitchen
 ```
 
 ### 3. Install dependencies
@@ -122,10 +119,10 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed in your terminal, usually:
+Open the local URL displayed in your terminal:
 
 ```text
-http://localhost:5173
+http://localhost:3000
 ```
 
 ### 5. Build for production
@@ -141,6 +138,17 @@ To preview the production build locally:
 ```bash
 npm run preview
 ```
+
+## 🌐 Deployment Options
+
+### Option A: Vercel (Recommended for Quick Deploy)
+
+PixelKitchen is pre-configured for Vercel with `vercel.json` (SPA rewrites) and `.npmrc` (`legacy-peer-deps=true`):
+
+1. Go to [Vercel Dashboard](https://vercel.com/new).
+2. Import your GitHub repository (`rajatmishra1809/Pixel-Kitchen`).
+3. Vercel automatically detects the **Vite** framework preset with build command `npm run build` and output directory `dist`.
+4. Click **Deploy**.
 
 ## ☁️ AWS Deployment
 
@@ -189,13 +197,12 @@ AWS usage is not guaranteed to be free. Charges depend on account eligibility, s
 
 ## 🔮 Future Enhancements
 
-- User authentication and personalized palette collections.
-- Integration with AWS Cognito for identity management.
-- Cloud-based image processing through Lambda.
-- Palette sharing through unique URLs.
-- Accessibility-focused color contrast recommendations.
-- Advanced gradient generation and design templates.
-- Analytics for palette usage and user interactions.
+- Multi-tenant user authentication and personalized cloud palette collections.
+- Integration with AWS Cognito for managed identity and OAuth sign-in.
+- Cloud-based bulk image processing through AWS Lambda.
+- Instant palette sharing through unique short URLs and QR codes.
+- Advanced procedural mesh gradient generation and CSS export.
+- Real-time telemetry and palette trend analytics via Amazon CloudWatch.
 
 ## 🎓 Academic Information
 
